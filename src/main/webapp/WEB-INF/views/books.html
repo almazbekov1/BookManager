@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+
+<h1>Book list</h1>
+<hr>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+    </tr>
+    <tr th:each="book : ${testBook}">
+        <td th:text="${book.id}"></td>
+        <td th:text="${book.title}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.price}"></td>
+    </tr>
+</table>
+<br>
+<hr>
+<a href="/books/add-book">Add new book</a>
+<br>
+
+</body>
+</html>
